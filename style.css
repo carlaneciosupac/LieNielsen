@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    background-color: white;
+}
+
+body {
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url("./img/LN-logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+nav {
+    margin: 10px auto;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+nav ul {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ul li {
+    color: gray;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 400px 100px auto 720px;
+    grid-template-areas: "pics data" "pics ." "info unboxing" "making making";
+    gap: 10px;
+}
+
+#pics {
+    grid-area: pics;
+}
+
+#data {
+    grid-area: data;
+}
+
+#info {
+    grid-area: info;
+}
+
+#unboxing {
+    grid-area: unboxing;
+}
+
+#making {
+    grid-area: making;
+}
+
+
+#pics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-content: start;
+}
+
+.mainpic {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pic:not(.mainpic) {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#data h2 {
+    padding-top: 50px;
+    font-size: 2.5rem;
+    color: darkgray;
+    text-align: center;
+}
+
+#data p {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: brown;
+    text-align: center;
+}
+
+#info {
+    background-color: #f0f0f0;
+}
+
+#info h3 {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    font-size: 2rem;
+    color: brown;
+}
+
+#info p,
+#info li {
+    padding: 5px;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+video{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    margin: 25px auto;
+    border-top: 1px solid lightgrey;
+}
+
+footer p {
+    margin-top: 10px;
+    text-align: center;
+}

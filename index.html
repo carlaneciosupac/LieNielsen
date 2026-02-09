@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>No. 60-1/2 Low Angle Adjustable Mouth Block Plane Lie-Nielsen Toolworks </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="No. 60-1/2 Adjustable Mouth Block Plane Based on the Stanley No. 60½, this versatile plane is useful for every sort of woodworking job and a pleasure to use. The movable shoe in front of the blade allows you to easily and precisely adjust the mouth opening: fine mouth for finishing work and thin...">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css" media="screen">
+</head>
+
+<body>
+
+    <audio autoplay>
+        <source src="audio/metallica_enter_sandman.ogg">
+        <source src="audio/metallica_enter_sandman.m4a">
+        <source src="audio/metallica_enter_sandman.mp3">
+    </audio>
+
+    <header>
+        <h1>Lie-Nielsen TOOLWORKS INC.</h1>
+        <nav>
+            <ul>
+                <li>Hand Tools</li>
+                <li>Sharpening & Tool Care</li>
+                <li>Workbenches</li>
+                <li>Education</li>
+                <li>Gifts</li>
+                <li>Events</li>
+                <li>Information</li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="pics">
+                <img class="pic mainpic" src="./img/60_1_2__001.jpg" alt="">
+                <img class="pic" src="./img/60_1_2__002.jpg" alt="">
+                <img class="pic" src="./img/60_1_2__003.jpg" alt="">
+                <img class="pic" src="./img/60_1_2__004.jpg" alt="">
+            </section>
+            <section id="data">
+                <h2>No. 60-1/2 Low Angle Adjustable Mouth Block Plane</h2>
+                <p class="price">$190.00</p>
+            </section>
+            <section id="info">
+                <h3>Details</h3>
+                <p>
+                    <strong>No. 60-1/2 Adjustable Mouth Block Plane</strong>
+                </p>
+                <p>
+                    Based on the Stanley No. 60½, this versatile plane is useful for every sort of woodworking job and a
+                    pleasure to use.
+                </p>
+                <p>
+                    The movable shoe in front of the blade allows you to easily and precisely adjust the mouth opening:
+                    fine mouth for finishing work and thin shavings, or ample opening for rank cuts.
+                </p>
+                <p>
+                    Ductile Iron body is surface ground flat and square to a tolerance of .001" or better. Large,
+                    comfortable Bronze cap is tensioned with a 1-1/2" Brass spinwheel. Like our other block planes, the
+                    blade is adjusted with a captive nut for precise control with minimal backlash.
+                </p>
+                <p>
+                    The blade comes beveled at 25° and is bedded in the tool at 12º, making the overall cutting angle
+                    37°, which is ideal for fine cuts and end grain work. Weight is 1.5 lbs.
+                </p>
+                <ul>
+                    <li>6-1/4" long</li>
+                    <li>1-3/4" wide</li>
+                    <li>Blade is 1-3/8" wide x 1/8" thick</li>
+                    <li>Blade is bedded at 12º</li>
+                    <li>Weight 1.5 lbs.</li>
+                </ul>
+                <p>
+                    <em>
+                        The No. 60-1/2 rated "BEST OVERALL BLOCK PLANE"
+                        <br>
+                        - Fine Woodworking Tool Guide
+                        <br>
+                        "TOP TOOL" - Wood Magazine
+                    </em>
+                </p>
+            </section>
+            <section id="unboxing">
+                <video preload="none" controls muted poster="video/lie_nielsen_poster.webp">
+                    <source src="video/Lie-Nielsen_av1.webm" type="video/webm">
+                    <source src="video/Lie-Nielsen_h265.mp4" type="video/mp4">
+                    <source src="video/Lie-Nielsen_h264.mp4" type="video/mp4">
+                    Sorry your video player can't
+                </video>
+            </section>
+
+            <aside id="making">
+                <video preload="none" id="video_making" muted poster="./video/making_of_a_nielsen_plane_poster.webp">
+                    <source src="video/making_of_a_nielsen_av1.webm" type="video/webm">
+                    <source src="video/making_of_a_nielsen_h265.mp4" type="video/mp4">
+                    <source src="video/making_of_a_nielsen_h264.mp4" type="video/mp4">
+                </video>
+            </aside>
+        </main>
+        <footer>
+            <p>
+                © 1995 - 2026 Lie-Nielsen Toolworks
+            </p>
+        </footer>
+
+        <script>
+            // 1. Esperamos a que el DOM esté listo por seguridad
+            document.addEventListener("DOMContentLoaded", () => {
+
+                // 2. Seleccionamos el vídeo (asegúrate de que el ID coincida)
+                const video = document.getElementById('video_making');
+
+                // 3. Configuración del observador
+                const options = {
+                    root: null,       // El visor (viewport) es la referencia
+                    threshold: 0.75    // Se activa cuando el 50% del vídeo es visible
+                };
+
+                // 4. Qué hacer cuando el vídeo entra/sale
+                const callback = (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Si el vídeo es visible, intenta reproducir
+                            video.play().catch(error => {
+                                console.log("El navegador bloqueó el autoplay:", error);
+                            });
+                        } else {
+                            // Si el usuario hace scroll hacia arriba y el vídeo sale, páusalo
+                            video.pause();
+                        }
+                    });
+                };
+
+                // 5. Crear e iniciar el observador
+                const observer = new IntersectionObserver(callback, options);
+                observer.observe(video);
+            });
+        </script>
+    </header>
+
+
+</body>
